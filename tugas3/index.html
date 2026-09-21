@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website portfolio pribadi">
+    <title>Portfolio - Ahmad Farhan Zuhdi</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background: #f8f9fa; color: #212529; }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding-top: 90px;
+            padding-bottom: 60px;
+        }
+
+        .hero-image img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid #fff;
+            box-shadow: 0 .75rem 2rem rgba(0,0,0,.15);
+        }
+
+        .eyebrow {
+            letter-spacing: .12rem;
+            font-size: .8rem;
+            font-weight: 700;
+            color: #0d6efd;
+        }
+
+        .section { padding: 80px 0; }
+        .portfolio-section { background: #fff; }
+
+        .info-card {
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.1) !important;
+        }
+
+        .project-card {
+            overflow: hidden;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,.12) !important;
+        }
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 767.98px) {
+            .hero { text-align: center; min-height: auto; padding-top: 110px; }
+            .hero-image { margin-top: 35px; }
+            .hero-image img { width: 210px; height: 210px; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR BOOTSTRAP -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+            My<span class="text-primary">Portfolio</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Biodata</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <button class="btn btn-primary btn-sm px-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#contactModal">
+                        Contact Me
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <p class="eyebrow mb-2">WELCOME TO MY WEBSITE</p>
+                    <h1 class="display-4 fw-bold">
+                        Selamat Datang di <span class="text-primary">Website Saya</span>
+                    </h1>
+                    <p class="lead text-secondary my-4">
+                        Ini adalah website portfolio pribadi yang berisi informasi
+                        singkat tentang saya, keahlian, dan beberapa project yang pernah dikerjakan.
+                    </p>
+                    <div class="d-flex gap-2 flex-wrap justify-content-lg-start justify-content-center">
+                        <a href="#about" class="btn btn-primary btn-lg">
+                            Pelajari Lebih Lanjut
+                        </a>
+                        <button class="btn btn-outline-dark btn-lg"
+                                data-bs-toggle="modal"
+                                data-bs-target="#contactModal">
+                            Hubungi Saya
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 text-center hero-image">
+                    <img src="profile.jpg" alt="Foto profil Ahmad Farhan Zuhdi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="eyebrow mb-1">PROFILE</p>
+                <h2 class="fw-bold">About Me</h2>
+                <p class="text-secondary">Berikut informasi singkat mengenai profil saya.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="info-card card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <small class="text-secondary">Full Name</small>
+                            <h5 class="fw-bold mt-2 mb-0">Ahmad Farhan Zuhdi</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="info-card card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <small class="text-secondary">Education</small>
+                            <h5 class="fw-bold mt-2 mb-0">S1 Informatika</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="info-card card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <small class="text-secondary">Pekerjaan</small>
+                            <h5 class="fw-bold mt-2 mb-0">IT Support Supervisor</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="info-card card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <small class="text-secondary">Contact</small>
+                            <h5 class="fw-bold mt-2 mb-0">ahmad@example.com</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="info-card card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <small class="text-secondary">Hobi</small>
+                            <h5 class="fw-bold mt-2 mb-0">Teknologi & Coding</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="info-card card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <small class="text-secondary">Alamat</small>
+                            <h5 class="fw-bold mt-2 mb-0">Jakarta, Indonesia</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="eyebrow mb-1">MY WORK</p>
+                <h2 class="fw-bold">Portfolio</h2>
+                <p class="text-secondary">Beberapa contoh project yang pernah saya kerjakan.</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="project-card card border-0 shadow-sm h-100">
+                        <img src="project-1.jpg" class="card-img-top" alt="Project Website 1">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 fw-bold">Project Website 1</h3>
+                            <p class="text-secondary">
+                                Desain dan pengembangan website portfolio.
+                            </p>
+                            <button class="btn btn-outline-primary mt-auto"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#project1Modal">
+                                Lihat Project
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="project-card card border-0 shadow-sm h-100">
+                        <img src="project-2.jpg" class="card-img-top" alt="Project Website 2">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 fw-bold">Project Website 2</h3>
+                            <p class="text-secondary">
+                                Landing page modern dengan responsive layout.
+                            </p>
+                            <button class="btn btn-outline-primary mt-auto"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#project2Modal">
+                                Lihat Project
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="project-card card border-0 shadow-sm h-100">
+                        <img src="project-3.jpg" class="card-img-top" alt="Project Website 3">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 fw-bold">Project Website 3</h3>
+                            <p class="text-secondary">
+                                Website dashboard dan interface aplikasi.
+                            </p>
+                            <button class="btn btn-outline-primary mt-auto"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#project3Modal">
+                                Lihat Project
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- MODAL CONTACT -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="contactModalLabel">Contact Me</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nama Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="nama@email.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Pesan</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan..."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PROJECT 1 -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="project1ModalLabel">Project Website 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img src="project-1.jpg" class="img-fluid rounded mb-3" alt="Project Website 1">
+                <p>Desain dan pengembangan website portfolio dengan tampilan modern dan responsive.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PROJECT 2 -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="project2ModalLabel">Project Website 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img src="project-2.jpg" class="img-fluid rounded mb-3" alt="Project Website 2">
+                <p>Landing page modern menggunakan layout responsive untuk desktop, tablet, dan mobile.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PROJECT 3 -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="project3ModalLabel">Project Website 3</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img src="project-3.jpg" class="img-fluid rounded mb-3" alt="Project Website 3">
+                <p>Website dashboard dan interface aplikasi dengan komponen Bootstrap yang responsive.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">© 2026 Ahmad Farhan Zuhdi. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
