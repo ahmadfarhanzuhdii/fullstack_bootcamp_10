@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive developer portfolio built with Bootstrap 5">
+  <title>Alex Morgan — Developer Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="portfolio-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="profile-photo-wrap">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=85"
+               alt="Profile photo" class="profile-photo">
+        </div>
+
+        <h1>Hello I'm <span>Alex Morgan</span></h1>
+        <p class="role">Web Designer, Content Creator &amp; Writer</p>
+
+        <a href="#contact" class="btn btn-success btn-sm rounded-pill px-3">
+          <i class="bi bi-chat-dots me-1"></i> Available for work
+        </a>
+
+        <div class="sidebar-actions mt-3">
+          <button class="icon-btn" title="GitHub"><i class="bi bi-github"></i></button>
+          <button class="download-btn" onclick="downloadCV()">
+            <i class="bi bi-download me-1"></i> Download CV
+          </button>
+        </div>
+
+        <button class="contact-side-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+          <i class="bi bi-envelope me-1"></i> Contact Me
+        </button>
+
+        <div class="socials">
+          <small>Social Media</small>
+          <div class="d-flex gap-2 mt-2">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <section class="content">
+      <!-- ABOUT -->
+      <section id="about" class="content-section">
+        <div class="section-heading">
+          <span class="eyebrow">ABOUT</span>
+          <h2>Designer, developer &amp; creative problem solver.</h2>
+        </div>
+        <p class="intro">
+          I am Alex Morgan, a passionate Web Designer &amp; Developer working in the dynamic
+          world of digital. My expertise lies at the intersection of visual design and
+          technical implementation.
+        </p>
+        <p class="muted">
+          With over 5 years of experience in crafting visually stunning and user-centric
+          websites, I love turning ideas into fast, clean and beautiful digital experiences.
+        </p>
+
+        <div class="section-heading mt-4">
+          <span class="eyebrow">WHAT I DO</span>
+        </div>
+        <div class="tag-list">
+          <span class="skill-tag purple">Software Engineer</span>
+          <span class="skill-tag blue">Web Designer</span>
+          <span class="skill-tag orange">Project Manager</span>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="eyebrow">EDUCATION</span>
+        </div>
+        <div class="timeline-card">
+          <div>
+            <h3>Bachelor of Computer Science</h3>
+            <p>University of Technology</p>
+          </div>
+          <span class="date">2022 • Present</span>
+          <p class="muted mb-0">
+            Computer Science undergraduate student with focus on Software Engineering,
+            UI/UX and modern web technologies.
+          </p>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="eyebrow">STATS</span>
+        </div>
+        <div class="row g-2">
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <strong>15+</strong>
+              <span>Projects Completed</span>
+              <i class="bi bi-award"></i>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <strong>2+</strong>
+              <span>Achievements</span>
+              <i class="bi bi-trophy"></i>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <strong>4+</strong>
+              <span>Organizations</span>
+              <i class="bi bi-people"></i>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <strong>3+</strong>
+              <span>Years Learning</span>
+              <i class="bi bi-clock-history"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="eyebrow">EXPERIENCE</span>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="company-logo gradient-logo">CM</div>
+            <div class="experience-body">
+              <div class="d-flex justify-content-between gap-3">
+                <div>
+                  <h3>COMPFEST 17 Fakultas UI</h3>
+                  <p class="role-line">Vice Manager of Development Field</p>
+                </div>
+                <span class="date">Jun 2025 — Present</span>
+              </div>
+              <ul>
+                <li>Led two divisions, Software Engineering and UI/UX.</li>
+                <li>Planned, coordinated and reviewed development activities.</li>
+                <li>Collaborated across divisions to deliver digital products.</li>
+              </ul>
+            </div>
+            <button class="collapse-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#exp1">
+              <i class="bi bi-chevron-down"></i>
+            </button>
+          </article>
+          <div class="collapse" id="exp1"></div>
+
+          <article class="experience-card compact">
+            <div class="company-logo blue-logo">CM</div>
+            <div class="experience-body">
+              <h3>COMPFEST 17 Fakultas UI</h3>
+              <p class="role-line">Web Developer</p>
+              <span class="date">Jan 2025 — Jun 2025</span>
+            </div>
+            <button class="collapse-toggle" type="button"><i class="bi bi-chevron-down"></i></button>
+          </article>
+
+          <article class="experience-card compact">
+            <div class="company-logo pink-logo">CM</div>
+            <div class="experience-body">
+              <h3>COMPFEST 17 Fakultas UI</h3>
+              <p class="role-line">UI/UX Designer</p>
+              <span class="date">Jan 2025 — Jun 2025</span>
+            </div>
+            <button class="collapse-toggle" type="button"><i class="bi bi-chevron-down"></i></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="content-section" id="projects">
+        <div class="d-flex justify-content-between align-items-end section-heading">
+          <div>
+            <span class="eyebrow">PROJECT</span>
+            <h2>Selected work</h2>
+          </div>
+          <button class="btn btn-outline-dark btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#projectsModal">
+            <i class="bi bi-grid me-1"></i> View all
+          </button>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <article class="project-card">
+              <div class="project-image image-one">
+                <span class="project-badge">Web App</span>
+              </div>
+              <div class="project-info">
+                <h3>COMPFEST 17 Fakultas UI</h3>
+                <p>Responsive event website with modern UI components and clean information architecture.</p>
+                <button class="btn btn-dark btn-sm w-100" data-bs-toggle="modal" data-bs-target="#projectModal" data-project="0">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> View Demo
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <article class="project-card">
+              <div class="project-image image-two">
+                <span class="project-badge">Dashboard</span>
+              </div>
+              <div class="project-info">
+                <h3>Creative Dashboard</h3>
+                <p>Colorful analytics dashboard designed for quick scanning and responsive use.</p>
+                <button class="btn btn-dark btn-sm w-100" data-bs-toggle="modal" data-bs-target="#projectModal" data-project="1">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> View Demo
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <article class="project-card">
+              <div class="project-image image-three">
+                <span class="project-badge">Landing Page</span>
+              </div>
+              <div class="project-info">
+                <h3>Creative Studio</h3>
+                <p>High-conversion landing page with bold typography, cards and call-to-action sections.</p>
+                <button class="btn btn-dark btn-sm w-100" data-bs-toggle="modal" data-bs-target="#projectModal" data-project="2">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> View Demo
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <article class="project-card">
+              <div class="project-image image-four">
+                <span class="project-badge">Portfolio</span>
+              </div>
+              <div class="project-info">
+                <h3>Personal Portfolio</h3>
+                <p>Minimal personal portfolio built with Bootstrap Grid, modal and interactive cards.</p>
+                <button class="btn btn-dark btn-sm w-100" data-bs-toggle="modal" data-bs-target="#projectModal" data-project="3">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> View Demo
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAROUSEL -->
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="eyebrow">FEATURED</span>
+          <h2>Project carousel</h2>
+        </div>
+
+        <div id="featuredCarousel" class="carousel slide colorful-carousel" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2"></button>
+          </div>
+
+          <div class="carousel-inner rounded-4 overflow-hidden">
+            <div class="carousel-item active">
+              <div class="carousel-art art-purple">
+                <div>
+                  <span>01</span>
+                  <h3>Design meets technology</h3>
+                  <p>Responsive interfaces built for real users.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-art art-orange">
+                <div>
+                  <span>02</span>
+                  <h3>Clean, colorful &amp; responsive</h3>
+                  <p>Bootstrap Grid makes every section adapt smoothly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-art art-blue">
+                <div>
+                  <span>03</span>
+                  <h3>Built for interaction</h3>
+                  <p>Cards, hover effects, modals and micro-interactions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TECHNOLOGIES -->
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="eyebrow">SKILLS &amp; TECHNOLOGIES</span>
+        </div>
+
+        <div class="skills-tabs">
+          <button class="active">FRONTEND</button>
+          <button>BACKEND</button>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-item react"><i class="bi bi-atom"></i><span>React</span></div>
+          <div class="tech-item node"><i class="bi bi-diagram-3"></i><span>Node.js</span></div>
+          <div class="tech-item next"><strong>N</strong><span>Next.js</span></div>
+          <div class="tech-item java"><i class="bi bi-cup-hot"></i><span>Java</span></div>
+          <div class="tech-item html"><i class="bi bi-code-square"></i><span>HTML</span></div>
+          <div class="tech-item ts"><strong>TS</strong><span>TypeScript</span></div>
+          <div class="tech-item css"><i class="bi bi-brush"></i><span>CSS</span></div>
+          <div class="tech-item bootstrap"><i class="bi bi-bootstrap"></i><span>Bootstrap</span></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="content-section" id="contact">
+        <div class="section-heading">
+          <span class="eyebrow">CONTACT ME</span>
+          <h2>Let's build something great.</h2>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" class="form-control" type="text" placeholder="Your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" class="form-control" type="email" placeholder="Example: you@email.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+
+          <button class="btn btn-dark w-100" type="submit">
+            Send Message <i class="bi bi-send ms-1"></i>
+          </button>
+        </form>
+      </section>
+
+      <footer class="portfolio-footer">
+        <span>Portfolio</span>
+        <span>© 2026 Alex Morgan.</span>
+      </footer>
+    </section>
+  </main>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Contact Alex</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="muted">Choose a channel to start a conversation.</p>
+          <div class="modal-contact-grid">
+            <a href="mailto:hello@example.com"><i class="bi bi-envelope"></i><span>Email</span></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i><span>LinkedIn</span></a>
+            <a href="https://github.com/" target="_blank"><i class="bi bi-github"></i><span>GitHub</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT MODAL + CAROUSEL -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header border-0">
+          <div>
+            <small class="text-white-50">PROJECT DETAILS</small>
+            <h5 class="modal-title" id="projectModalTitle">Project</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <div id="projectModalCarousel" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner rounded-4">
+              <div class="carousel-item active"><div class="modal-art art-purple"></div></div>
+              <div class="carousel-item"><div class="modal-art art-orange"></div></div>
+              <div class="carousel-item"><div class="modal-art art-blue"></div></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div class="mt-4">
+            <h4 id="projectModalHeading">Project description</h4>
+            <p id="projectModalDescription" class="muted"></p>
+            <div class="d-flex flex-wrap gap-2" id="projectTags"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALL PROJECTS MODAL -->
+  <div class="modal fade" id="projectsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">All Projects</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6"><div class="mini-project">E-commerce UI <span>UI/UX</span></div></div>
+            <div class="col-md-6"><div class="mini-project">Event Platform <span>Web App</span></div></div>
+            <div class="col-md-6"><div class="mini-project">Analytics Dashboard <span>Dashboard</span></div></div>
+            <div class="col-md-6"><div class="mini-project">Personal Website <span>Portfolio</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast" role="alert">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill text-success me-2"></i>
+        <strong class="me-auto">Message sent</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+      </div>
+      <div class="toast-body">Thank you! Your message form is ready to connect to a backend.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
